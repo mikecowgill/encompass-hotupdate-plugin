@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotUpdatePlugin", "HotUpdatePlugin\HotUpdatePlugin.csproj", "{792C3E27-2D9E-444D-94D6-1DDB51A8A875}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Settings", "Settings", "{C75C3345-ADA6-454D-8144-552AE32F25C3}"
+	ProjectSection(SolutionItems) = preProject
+		hotupdate-plugin-settings.json = hotupdate-plugin-settings.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{792C3E27-2D9E-444D-94D6-1DDB51A8A875}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{792C3E27-2D9E-444D-94D6-1DDB51A8A875}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{792C3E27-2D9E-444D-94D6-1DDB51A8A875}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{792C3E27-2D9E-444D-94D6-1DDB51A8A875}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0C3A3E2B-E23F-4E19-A73C-2B1983EC164A}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,35 @@
+{
+	"PluginSettings": {
+		"SideMenuOpenByDefault": "False",
+		"TestServer": "",
+		"SuperAdminRun": "False",
+		"Permission": {
+			"AllAccess": [
+			]
+		},
+		"Plugins": {
+			"PluginHotUpdate": {
+				"Permissions": {
+					"Everyone": false,
+					"Personas": [
+						"Super Administrator"
+					],
+					"UserIds": []
+				},
+				"Settings": {}
+			}
+		}
+	},
+	"Links": {
+		"Loan Officer": {
+		},
+		"Default": {
+		}
+	},
+	"LoanInformation": {
+		"Loan Officer": {
+		},
+		"Default": {
+		}
+	}
+}

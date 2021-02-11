@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{792C3E27-2D9E-444D-94D6-1DDB51A8A875}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Lendmatic.HotUpdatePlugin</RootNamespace>
+    <AssemblyName>Lendmatic.HotUpdatePlugin</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>false</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ABCpdf">
+      <HintPath>..\..\..\..\..\..\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\ABCpdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Words">
+      <HintPath>..\..\..\..\..\..\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\Aspose.Words.dll</HintPath>
+    </Reference>
+    <Reference Include="AxInterop.SHDocVw">
+      <HintPath>..\..\..\..\..\..\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\AxInterop.SHDocVw.dll</HintPath>
+    </Reference>
+    <Reference Include="Client">
+      <HintPath>..\..\..\..\..\..\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\Client.dll</HintPath>
+    </Reference>
+    <Reference Include="ClientCommon">
+      <HintPath>..\..\..\..\..\..\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\ClientCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="ClientServer">
+      <HintPath>..\..\..\..\..\..\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\ClientServer.dll</HintPath>
+    </Reference>
+    <Reference Include="ClientSession">
+      <HintPath>..\..\..\..\..\..\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\ClientSession.dll</HintPath>
+    </Reference>
+    <Reference Include="DataAccess">
+      <HintPath>..\..\..\..\..\..\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentConverter">
+      <HintPath>..\..\..\..\..\..\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\DocumentConverter.dll</HintPath>
+    </Reference>
+    <Reference Include="eFolder">
+      <HintPath>..\..\..\..\..\..\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\eFolder.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.AdvCode">
+      <HintPath>..\..\..\..\..\..\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\Elli.AdvCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.BusinessRules">
+      <HintPath>..\..\..\..\..\..\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\Elli.BusinessRules.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.Common">
+      <HintPath>..\..\..\..\..\..\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\Elli.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.Data">
+      <HintPath>..\..\..\..\..\..\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\Elli.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.Data.MongoDB">
+      <HintPath>..\..\..\..\..\..\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\Elli.Data.MongoDB.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.DirectoryServices.Contracts">
+      <HintPath>..\..\..\..\..\..\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\Elli.DirectoryServices.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.DirectoryServices.Proxies">
+      <HintPath>..\..\..\..\..\..\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\Elli.DirectoryServices.Proxies.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.Domain">
+      <HintPath>..\..\..\..\..\..\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\Elli.Domain.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.ElliEnum">
+      <HintPath>..\..\..\..\..\..\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\Elli.ElliEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.Identity">
+      <HintPath>..\..\..\..\..\..\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\Elli.Identity.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.Interface">
+      <HintPath>..\..\..\..\..\..\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\Elli.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.Log">
+      <HintPath>..\..\..\..\..\..\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\Elli.Log.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.MessageQueues">
+      <HintPath>..\..\..\..\..\..\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\Elli.MessageQueues.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.Metrics">
+      <HintPath>..\..\..\..\..\..\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\Elli.Metrics.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.Server.Remoting">
+      <HintPath>..\..\..\..\..\..\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\Elli.Server.Remoting.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.Service">
+      <HintPath>..\..\..\..\..\..\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\Elli.Service.dll</HintPath>
+    </Reference>
+    <Reference Include="Elli.Service.Common">
+      <HintPath>..\..\..\..\..\..\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\Elli.Service.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="EMBAM15">
+      <HintPath>..\..\..\..\..\..\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\EMBAM15.dll</HintPath>
+    </Reference>
+    <Reference Include="EMCommon">
+      <HintPath>..\..\..\..\..\..\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\EMCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="EMePass, Version=3.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\EMePass.dll</HintPath>
+    </Reference>
+    <Reference Include="EMInput, Version=19.4.0.4, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\EMInput.dll</HintPath>
+    </Reference>
+    <Reference Include="EMLoanUtils15">
+      <HintPath>..\..\..\..\..\..\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\EMLoanUtils15.dll</HintPath>
+    </Reference>
+    <Reference Include="EncompassAutomation">
+      <HintPath>..\..\..\..\..\..\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\EncompassAutomation.dll</HintPath>
+    </Reference>
+    <Reference Include="EncompassObjects">
+      <HintPath>..\..\..\..\..\..\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\EncompassObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="FlatFiles, Version=4.13.0.0, Culture=neutral, PublicKeyToken=6de75c8785df4020, processorArchitecture=MSIL">
+      <HintPath>..\packages\FlatFiles.4.13.0\lib\net451\FlatFiles.dll</HintPath>
+    </Reference>
+    <Reference Include="FormEditorUI, Version=20.1.0.6, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\FormEditorUI.dll</HintPath>
+    </Reference>
+    <Reference Include="MainUI">
+      <HintPath>..\..\..\..\..\..\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\MainUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.HashCode.1.1.0\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="Reporting, Version=19.4.0.4, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\Reporting.dll</HintPath>
+    </Reference>
+    <Reference Include="SetupUI, Version=19.4.0.4, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\SetupUI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Device" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.3\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIElements, Version=4.0.0.0, Culture=neutral, PublicKeyToken=d11ef57bba4acf91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\SmartClientCache\Apps\UAC\Ellie Mae\xIHR5EqGa7zPnRG0YpD5z4TPAB0=\Encompass360\UIElements.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Objects\Args\FormOpenedArgs.cs" />
+    <Compile Include="Objects\Attributes\HotUpdatePluginAttribute.cs" />
+    <Compile Include="Objects\Enums\EncompassLogType.cs" />
+    <Compile Include="Objects\Extension\ControlExtensions.cs" />
+    <Compile Include="Objects\Extension\StringExtensions.cs" />
+    <Compile Include="Objects\Extension\WindowsFormsExtensions.cs" />
+    <Compile Include="Objects\Helpers\CDOHelper.cs" />
+    <Compile Include="Objects\Helpers\EncompassHelper.cs" />
+    <Compile Include="Objects\Helpers\Reflect.cs" />
+    <Compile Include="Objects\Interface\AbstractControlDescriptionProvider.cs" />
+    <Compile Include="Objects\Interface\IBeforeCommit.cs" />
+    <Compile Include="Objects\Interface\IBeforeMilestoneCompleted.cs" />
+    <Compile Include="Objects\Interface\ICommitted.cs" />
+    <Compile Include="Objects\Interface\IDataExchangeReceived.cs" />
+    <Compile Include="Objects\Interface\IFactory.cs" />
+    <Compile Include="Objects\Interface\IFieldChange.cs" />
+    <Compile Include="Objects\Interface\ILoanMenuControl.cs" />
+    <Compile Include="Objects\Interface\ILoanTabChanged.cs" />
+    <Compile Include="Objects\Interface\ILogEntryAdded.cs" />
+    <Compile Include="Objects\Interface\ILogEntryChanged.cs" />
+    <Compile Include="Objects\Interface\ILogEntryRemoved.cs" />
+    <Compile Include="Objects\Interface\IMenuItemBase.cs" />
+    <Compile Include="Objects\Interface\IMilestoneCompleted.cs" />
+    <Compile Include="Objects\Interface\IFormLoaded.cs" />
+    <Compile Include="Objects\Interface\ILoanClosing.cs" />
+    <Compile Include="Objects\Interface\ILoanOpened.cs" />
+    <Compile Include="Objects\Interface\ILogin.cs" />
+    <Compile Include="Objects\Interface\InterfaceHelper.cs" />
+    <Compile Include="Objects\Interface\IPipelineTabChanged.cs" />
+    <Compile Include="Objects\Interface\IPlugin.cs" />
+    <Compile Include="Objects\Interface\ITabChanged.cs" />
+    <Compile Include="Objects\Interface\ITask.cs" />
+    <Compile Include="Objects\Interface\LoanMenuControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Objects\Models\CDO.cs" />
+    <Compile Include="Objects\Models\EncompassLog.cs" />
+    <Compile Include="Objects\Models\PluginSettings.cs" />
+    <Compile Include="Objects\Models\PluginAccessRight.cs" />
+    <Compile Include="Objects\Models\PluginHotUpdateMessage.cs" />
+    <Compile Include="Objects\Models\SettingsCDO.cs" />
+    <Compile Include="Objects\Plugin.cs" />
+    <Compile Include="Objects\ImplementationException.cs" />
+    <Compile Include="Objects\Logger.cs" />
+    <Compile Include="Objects\PluginAccess.cs" />
+    <Compile Include="Objects\RunningPlugins.cs" />
+    <Compile Include="Objects\Plugins.cs" />
+    <Compile Include="PluginEntry.cs" />
+    <Compile Include="UpdateNotification\PluginUpdateDataExchange.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Objects\PluginLoader.cs" />
+    <Compile Include="Properties\Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TopMenu\FormWrapper.cs" />
+    <Compile Include="TopMenu\MenuItemBase.cs" />
+    <Compile Include="TopMenu\PluginHotUpdateForm\PluginHotUpdate.cs" />
+    <Compile Include="TopMenu\PluginHotUpdateForm\PluginHotUpdate_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TopMenu\PluginHotUpdateForm\PluginHotUpdate_Form.designer.cs">
+      <DependentUpon>PluginHotUpdate_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TopMenu\TopMenuBase.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TopMenu\PluginHotUpdateForm\PluginHotUpdate_Form.resx">
+      <DependentUpon>PluginHotUpdate_Form.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\lendmatic-icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
