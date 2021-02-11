@@ -27,7 +27,9 @@ Using the Hot Update Plugin, the process is changed to:
 - The currently running plugin is Disposed and the instances removed.
 - The new plugin assembly is loaded into the AppDomain and all classes with [HotUpdatePlugin] are instantiated.
 
-**Using** There are some changes required in order make a plugin compatible with the Hot Update loader.
+**Using** 
+
+There are some changes required in order make a plugin compatible with the Hot Update loader.
 
 - Your plugin will need to swap the standard [Plugin] to [HotUpdatePlugin] attribute from the Lendmatic.HotUpdatePlugin.dll.
 - Your plugin will need to implement IDisposable ON THE SAME CLASS that is annotated with [HotUpdatePlugin].
@@ -81,7 +83,7 @@ public void Dispose()
 
 **Installation**
 
-- Download or build this project to get the Lendmatic.HotUpdatePlugin.dll
+- [Download](https://github.com/mikecowgill/encompass-hotupdate-plugin/releases) or build this project to get the Lendmatic.HotUpdatePlugin.dll
 - Add a reference from your plugin to Lendmatic.HotUpdatePlugin.dll
 - Change your plugin entrypoint attribute to [HotUpdatePlugin]
 - Implement IDisposable as described above
